@@ -1,7 +1,11 @@
 <header>
     <div class="flex">
         <div class="flex">
-            <%= image_tag "logo.png" %>
+            <div id="header-logo">
+                <%= link_to root_path do %>
+                    <%= image_tag 'logo.png' %>
+                <% end %>
+            </div>
             <div class="flex">
                 <div class="header-search-field">
                     <input type="text" placeholder="エリア">
@@ -13,9 +17,9 @@
                 </div>
             </div>
         </div>
-        <div>
-            <a href="">ログイン</a>
-            <a href="">登録する</a>
+        <div id="header-nav-right">
+            <a id="login-btn" href="">ログイン</a>
+            <a id="register-btn" href="">登録する</a>
         </div>
     </div>
 </header>

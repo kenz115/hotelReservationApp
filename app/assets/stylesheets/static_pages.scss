@@ -1,5 +1,10 @@
 /* common */
 
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 180px;
+}
 .flex {
     display: flex;
     justify-content: space-between;
@@ -14,25 +19,35 @@ a {
 header {
     background-color: #000;
     padding: 4px 30px;
+    #header-nav-right {
+        a {
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            width: 90px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 3px;
+        }
+        #login-btn {
+            background-color: #4a90e2;
+            margin-right: 20px;
+        }
+        #register-btn {
+            background-color: #6c757d;
+        }
+    }
+}
+#header-logo {
+    width: 220px;
+    cursor: pointer;
     a {
-        display: inline-block;
-        color: #fff;
-        text-decoration: none;
-        width: 90px;
-        height: 40px;
-        text-align: center;
-        line-height: 40px;
-        border-radius: 3px;
-    }
-    a:first-child {
-        background-color: #4a90e2;
-        margin-right: 20px;
-    }
-    a:last-child {
-        background-color: #6c757d;
-    }
-    img {
-        cursor: pointer;
+        width: 100%;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 }
 .header-search-field {
@@ -66,6 +81,7 @@ footer {
     color: #fff;
     text-align: center;
     font-size: 13px;
+    bottom: 0;
 }
 
 /* home */
