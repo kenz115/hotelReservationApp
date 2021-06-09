@@ -1,3 +1,52 @@
-// Place all the styles related to the rooms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+/* index */
+
+main {
+    padding: 30px 60px;
+}
+#searched-result {
+    font-size: 23px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+}
+#searched-rooms {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    a div {
+        border: 1px solid #e2e2e2;
+    }
+}
+.searched-room-wrap {
+    width: 25%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+.room-info {
+    padding: 15px;
+    p:first-child {
+        font-size: 18px;
+        font-weight: bold;
+        color: #909090;
+        margin-bottom: 1rem;
+    }
+    p:nth-child(2) {
+        font-size: 16px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 1rem;
+    }
+    p:last-child {
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+        text-align: right;
+    }
+    p:last-child::before {
+        content: "￥";
+        padding-right: 3px;
+    }
+}
