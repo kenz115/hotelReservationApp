@@ -1,2 +1,29 @@
-<h1>Rooms#show</h1>
-<p>Find me in app/views/rooms/show.html.erb</p>
+<div id="show">
+    <div>
+        <div>
+            <%= image_tag "/room_images/#{@room.image}" %>
+            <div>
+                <div>
+                    <%= image_tag "/user_images/#{@room.user.image}" %>
+                </div>
+                <div>
+                    <p><%= @room.name %></p>
+                    <p><%= @room.address %></p>
+                </div>
+            </div>
+            <p><%= @room.introduction %></p>
+        </div>
+        <div>
+            <p><%= @room.fee %></p>
+            <%= form_with model: @user do |f| %>
+                <%= f.label :start_date, "開始日" %>
+                <%= f.date_field :start_date, id: "start_date" %>
+                <%= f.label :end_date, "終了日" %>
+                <%= f.date_field :end_date, id: "end_date" %>
+                <%= f.label :number_of_peaple, "人数" %>
+                <%= f.text_field :number_of_peaple %>
+                <%= f.submit "ログイン" %>
+            <% end %>
+        </div>
+    </div>
+</div>

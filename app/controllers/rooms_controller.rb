@@ -4,6 +4,7 @@ class RoomsController < ApplicationController
   end
 
   def show
+    @room = Room.find(params[:id])
   end
 
   def new
@@ -13,5 +14,6 @@ class RoomsController < ApplicationController
   end
 
   def search
+    @rooms = Room.where("address LIKE ?", "%#{params[:area]}%")
   end
 end

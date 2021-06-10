@@ -1,2 +1,19 @@
-<h1>Rooms#search</h1>
-<p>Find me in app/views/rooms/search.html.erb</p>
+<div class="search">
+    <p id="searched-result">検索結果：<%= @rooms.count %>件</p>
+    <div id="searched-rooms">
+        <% @rooms.each do |room| %>
+            <div class="searched-room-wrap">
+                <%= link_to room do %>
+                    <div>
+                        <%= image_tag "/room_images/#{room.image}" %>
+                    </div>
+                    <div class="room-info">
+                        <p><%= room.name %></p>
+                        <p><%= room.address %></p>
+                        <p><%= room.fee %></p>
+                    </div>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+</div>
