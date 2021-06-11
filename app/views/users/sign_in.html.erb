@@ -1,0 +1,13 @@
+<div class="sign">
+    <div class="sign-wrap">
+        <p>ログイン</p>
+        <%= form_with model: @user do |f| %>
+            <%= f.label :name, "必須" %>
+            <%= f.text_field :email, placeholder: "メールアドレス" %><br>
+            <%= f.label :name, "必須" %>
+            <%= f.text_field :name, placeholder: "パスワード" %><br>
+            <%= f.submit "ログイン" %>
+        <% end %>
+        <%= link_to "新しいアカウントを作成", '/users/sign_up', class: "sign-link" %>
+    </div>
+</div>
