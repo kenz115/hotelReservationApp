@@ -18,8 +18,8 @@
             </div>
         </div>
         <div id="header-nav-right">
-            <a id="login-btn" href="">ログイン</a>
-            <a id="register-btn" href="">登録する</a>
+            <%= link_to "ログイン", '/users/sign_in', id: "login-btn" %>
+            <%= link_to "登録する", '/users/sign_up', id: "register-btn" %>
         </div>
     </div>
 </header>

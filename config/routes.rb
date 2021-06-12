@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  get '/users/sign_up'
+  get '/users/sign_up', to: 'users#new'
+  post '/users',   to: 'users#create'
   get '/users/sign_in'
 end
