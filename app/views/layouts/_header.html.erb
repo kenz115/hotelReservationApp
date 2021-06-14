@@ -18,8 +18,32 @@
             </div>
         </div>
         <div id="header-nav-right">
-            <%= link_to "ログイン", '/users/sign_in', id: "login-btn" %>
-            <%= link_to "登録する", '/users/sign_up', id: "register-btn" %>
+            <% if logged_in? %>
+                <div class="flex">
+                    <p id="current-user-name"><%= current_user.name %></p>
+                    <div>
+                        <%= image_tag "/user_images/#{current_user.image}", id: "current-user-image" %>
+                    </div>
+                </div>
+            <% else %>
+                <%= link_to "ログイン", '/users/sign_in', id: "login-btn" %>
+                <%= link_to "登録する", '/users/sign_up', id: "register-btn" %>
+            <% end %>    
         </div>
     </div>
 </header>
+<div class="current-user-menu">
+    <p>ルーム登録</p>
+    <p>予約済みルーム一覧</p>
+    <p>登録済みルーム一覧</p>
+    <p>設定</p>
+    <p><%= link_to "ログアウト", '/sign_out', method: :delete, id: "login-btn" %></p>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        $("#current-user-image").click(function() {
+            $(".current-user-menu").toggleClass("display")
+        })
+    });
+</script>
