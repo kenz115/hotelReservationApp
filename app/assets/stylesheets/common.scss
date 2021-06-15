@@ -10,6 +10,12 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.flex-align-start {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 a {
     text-decoration: none;
     color: #000;

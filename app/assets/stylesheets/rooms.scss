@@ -55,12 +55,6 @@
 
 #show {
     padding: 30px 150px;
-    .flex-align-start {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
 }
 #room-detail {
     width: 66%;
@@ -128,3 +122,71 @@
     }
 }
 
+/* new */
+
+.side-menu {
+    width: 17%;
+    padding: 30px 15px;
+    p {
+        color: #4a90e2;
+        font-size: 18px;
+        text-align: right;
+        padding: 5px 50px 5px 0;
+        border-right: 3px solid #4a90e2;
+        cursor: pointer;
+    }
+}
+#rooom-information-registration {
+    width: 83%;
+    border-left: 2px solid #e2e2e2;
+    background-color: #F6F8F9;
+    form {
+        background-color: #fff;
+        max-width: 880px;
+        margin: 50px auto;
+        padding: 15px;
+        p {
+            font-size: 20px;
+            padding: 20px;
+            border-bottom: 1px solid #eaedef;
+        }
+        .update-content {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;
+            border-bottom: 1px solid #eaedef;
+            input[type="submit"] {
+                width: 130px;
+                height: 35px;
+                border-radius: 4px;
+            }
+        }
+        input[type="text"], input[type="number"], textarea {
+            margin-bottom: 30px;
+            width: 75%;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding-left: 15px;
+        }
+        input[type="text"], input[type="number"] {
+            height: 40px;
+        }
+        textarea {
+            height: 150px;
+        }
+        input[type="file"] {
+            margin-bottom: 30px;
+        }
+        span {
+            color: #fff;
+            background-color: #ff0000a8;
+            font-size: 12px;
+            border-radius: 5px;
+            padding: 4px;
+            margin: 0 5px;
+        }
+        .room-new-label {
+            width: 25%;
+        }
+    }
+}

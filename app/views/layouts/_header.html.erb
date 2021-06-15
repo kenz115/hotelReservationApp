@@ -33,11 +33,11 @@
     </div>
 </header>
 <div class="current-user-menu">
-    <p>ルーム登録</p>
+    <p><%= link_to "ルーム登録", new_room_path %></p>
     <p>予約済みルーム一覧</p>
     <p>登録済みルーム一覧</p>
     <p>設定</p>
-    <p><%= link_to "ログアウト", '/sign_out', method: :delete, id: "login-btn" %></p>
+    <p><%= link_to "ログアウト", '/sign_out', method: :delete %></p>
 </div>
 
 <script type="text/javascript">
