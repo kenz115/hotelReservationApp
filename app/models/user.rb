@@ -5,6 +5,8 @@ class User < ApplicationRecord
     has_many :room, dependent: :destroy
     has_secure_password
     before_save :downcase_email
+    before_create :default_image
+    has_one_attached :image
 
     validates :name, presence: true, length: {maximum: 20}
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -43,6 +45,10 @@ class User < ApplicationRecord
 
         def downcase_email
             email.downcase!
+        end
+
+        def default_image
+            self.image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'default_icon.jpg')), filename: 'default_icon.jpg', content_type: 'image/jpg')
         end
 
 end

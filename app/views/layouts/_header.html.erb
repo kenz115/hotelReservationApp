@@ -22,7 +22,7 @@
                 <div class="flex">
                     <p id="current-user-name"><%= current_user.name %></p>
                     <div>
-                        <%= image_tag "/user_images/#{current_user.image}", id: "current-user-image" %>
+                        <%= image_tag current_user.image, id: "current-user-image" %>
                     </div>
                 </div>
             <% else %>

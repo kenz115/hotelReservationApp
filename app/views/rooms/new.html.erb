@@ -3,7 +3,7 @@
         <p>基本情報</p>
     </div>
     <div id="rooom-information-registration">
-        <%= form_with model: @room, local: true do |f| %>
+        <%= form_with model: @room, local: true, multipart: true do |f| %>
             <p>ルーム情報登録</p>
             <%= render 'shared/error_messages', object: f.object %>
             <div class="update-content">

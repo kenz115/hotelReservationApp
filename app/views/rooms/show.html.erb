@@ -2,11 +2,11 @@
     <div class="flex-align-start">
         <div id="room-detail">
             <div id="room-img">
-                <%= image_tag "/room_images/#{@room.image}" %>
+                <%= image_tag @room.image %>
             </div>
             <div class="flex-left">
                 <div id="user-icon">
-                    <%= image_tag "/user_images/#{@room.user.image}" %>
+                    <%= image_tag current_user.image %>
                 </div>
                 <div>
                     <p><%= @room.name %></p>
