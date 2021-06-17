@@ -24,7 +24,7 @@ a {
 a:hover {
     color: #888;
 }
-input[type="submit"] {
+input[type="submit"], button {
     color: #fff;
     background-color: #4a90e2;
     border: none;
@@ -34,4 +34,22 @@ input[type="submit"] {
 ul {
     list-style: none;
     margin: 0;
+}
+
+.side-menu {
+    width: 17%;
+    margin: 0 0 0 auto;
+    padding: 30px 15px;
+    .active {
+        color: #4a90e2;
+        font-size: 18px;
+        padding: 5px 20px 5px 40px;
+        border-right: 3px solid #4a90e2;
+        cursor: pointer;
+    }
+    .non-active {
+        font-size: 18px;
+        padding: 5px 20px 5px 40px;
+        cursor: pointer;
+    }
 }

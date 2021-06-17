@@ -1,0 +1,22 @@
+<div class="flex-align-start" id="new-room">
+    <div class="side-menu">
+        <p class="active">アカウント</p>
+        <p class="non-active">プロフィール</p>
+    </div>
+    <div id="account-wrap">
+        <div id="account">
+            <p>アカウント</p>
+            <div class="account-content">
+                <label for="email">メールアドレス</label>
+                <div id="email"><%= current_user.email %></div>
+            </div>
+            <div class="account-content">
+                <label for="password">パスワード</label>
+                <div id="password">*********</div>
+            </div>
+            <div class="account-content">
+                <%= link_to "編集", '/users/edit' %>
+            </div>
+        </div>
+    </div>
+</div>

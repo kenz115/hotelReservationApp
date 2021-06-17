@@ -66,3 +66,45 @@
         background-color: #FFABCE;
     }
 }
+
+/* account */
+
+#account-wrap {
+    width: 83%;
+    border-left: 2px solid #e2e2e2;
+    background-color: #F6F8F9;
+    height: 600px;
+    #account {
+        background-color: #fff;
+        max-width: 880px;
+        margin: 30px auto;
+        border: 1px solid #eaedef;
+        p {
+            font-size: 20px;
+            padding: 20px;
+        }
+        p, .account-content {
+            border-bottom: 1px solid #eaedef;
+        }
+        .account-content {
+            padding: 30px;
+            width: 100%;
+            a {
+                color: #fff;
+                background-color: #4a90e2;
+                border: none;
+                padding: 10px 45px;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+        }
+        label {
+            display: inline-block;
+            font-weight: bold;
+            width: 25%;
+        }
+        #email, #password {
+            display: inline-block;
+        }
+    }
+}
