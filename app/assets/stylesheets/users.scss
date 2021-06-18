@@ -108,3 +108,36 @@
         }
     }
 }
+
+/* edit */
+
+#edit-account {
+    width: 600px;
+    margin: 30px auto 0 auto;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: #bbb 0px 1px 3px 0px;
+    p {
+        font-size: 35px;
+    }
+    input, a {
+        width: 65%;
+        height: 38px;
+        border: 1px solid #ced4da;
+        border-radius: 3px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    input[type="email"], input[type="password"] {
+        padding-left: 10px;
+    }
+    a {
+        display: inline-block;
+        line-height: 38px;
+        color: #4a90e2;
+        transition: .5s;
+    }
+    a:hover {
+        background-color: #999;
+    }
+}

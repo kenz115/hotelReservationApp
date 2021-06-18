@@ -33,7 +33,7 @@
                 <%= f.text_area :introduction, value: current_user.introduction %><br>
             </div>
             <div class="update-content">    
-                <%= f.submit "更新" %>
+                <%= link_to "更新", '/users_edit' %>
             </div>
         <% end %>
     </div>

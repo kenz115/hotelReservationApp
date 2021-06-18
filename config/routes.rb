@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/users/sign_up', to: 'users#new'
   post '/users', to: 'users#create'
   get '/users/account', to: 'users#account'
+  get '/users/edit', to: 'users#edit'
   get '/users/profile', to: 'users#profile'
   patch '/users/profile', to: 'users#update_profile'
   get '/users/sign_in', to: 'sessions#new'
