@@ -77,6 +77,14 @@ header {
     p {
         margin-bottom: 10px;
     }
+    a {
+        text-decoration: none;
+        color: #000;
+        
+    }
+    a:hover {
+        color: #888;
+    }
 }
 .display {
     display: block;

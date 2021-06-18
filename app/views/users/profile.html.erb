@@ -1,0 +1,40 @@
+<div class="flex-align-start">
+    <div class="side-menu">
+        <p class="non-active">
+            <%= link_to "アカウント", '/users/account' %>
+        </p>
+        <p class="active">
+            <%= link_to "プロフィール", '/users/profile' %>
+        </p>
+    </div>
+    <div class="form">
+        <%= form_with model: @user, url: '/users/profile', method: :patch, local: true, multipart: true do |f| %>
+            <p>プロフィール</p>
+            <%= render 'shared/error_messages', object: f.object %>
+            <div class="update-content">
+                <%= image_tag current_user.image %>
+            </div>
+            <div class="update-content">
+                <div class="label">
+                    <%= f.label :name, "アイコン画像" %><span>必須</span>
+                </div>
+                <%= f.file_field :name%><br>
+            </div>
+            <div class="update-content">
+                <div class="label">
+                    <%= f.label :name, "名前" %><span>必須</span>
+                </div>
+                <%= f.text_field :name, value: current_user.name %><br>
+            </div>
+            <div class="update-content">
+                <div class="label">
+                    <%= f.label :introduction, "自己紹介" %><span>必須</span>
+                </div>
+                <%= f.text_area :introduction, value: current_user.introduction %><br>
+            </div>
+            <div class="update-content">    
+                <%= f.submit "更新" %>
+            </div>
+        <% end %>
+    </div>
+</div>

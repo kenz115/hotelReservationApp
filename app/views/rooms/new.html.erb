@@ -2,7 +2,7 @@
     <div class="side-menu">
         <p class="active">基本情報</p>
     </div>
-    <div id="rooom-information-registration">
+    <div class="form">
         <%= form_with model: @room, local: true, multipart: true do |f| %>
             <p>ルーム情報登録</p>
             <%= render 'shared/error_messages', object: f.object %>

@@ -1,10 +1,14 @@
-<div class="flex-align-start" id="new-room">
+<div class="flex-align-start">
     <div class="side-menu">
-        <p class="active">アカウント</p>
-        <p class="non-active">プロフィール</p>
+        <p class="active">
+            <%= link_to "アカウント", '/users/account' %>
+        </p>
+        <p class="non-active">
+            <%= link_to "プロフィール", '/users/profile' %>
+        </p>
     </div>
-    <div id="account-wrap">
-        <div id="account">
+    <div class="edit-user-wrap">
+        <div class="edit-user">
             <p>アカウント</p>
             <div class="account-content">
                 <label for="email">メールアドレス</label>

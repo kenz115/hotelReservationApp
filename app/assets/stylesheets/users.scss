@@ -67,14 +67,14 @@
     }
 }
 
-/* account */
+/* account, profile */
 
-#account-wrap {
+.edit-user-wrap {
     width: 83%;
     border-left: 2px solid #e2e2e2;
     background-color: #F6F8F9;
     height: 600px;
-    #account {
+    .edit-user {
         background-color: #fff;
         max-width: 880px;
         margin: 30px auto;
