@@ -16,9 +16,9 @@
             </div>
             <div class="update-content">
                 <div class="label">
-                    <%= f.label :name, "アイコン画像" %><span>必須</span>
+                    <%= f.label :image, "アイコン画像" %><span>必須</span>
                 </div>
-                <%= f.file_field :name%><br>
+                <%= f.file_field :image %><br>
             </div>
             <div class="update-content">
                 <div class="label">
@@ -33,7 +33,7 @@
                 <%= f.text_area :introduction, value: current_user.introduction %><br>
             </div>
             <div class="update-content">    
-                <%= link_to "更新", '/users_edit' %>
+                <%= f.submit "更新" %>
             </div>
         <% end %>
     </div>

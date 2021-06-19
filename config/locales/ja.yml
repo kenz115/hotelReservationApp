@@ -2,9 +2,16 @@ ja:
  activerecord:
   models:
    user: ユーザー
+   room: ルーム
   attributes:
    user:
     name: ユーザー名
     email: メールアドレス
     password: パスワード
     password_confirmation: パスワード確認
+   room:
+    name: ルーム名
+    address: 住所
+    fee: 料金
+    introduction: ルーム紹介
+    image: 画像

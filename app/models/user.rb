@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
     attr_accessor :remember_token
+    attr_accessor :current_password
 
     has_many :room, dependent: :destroy
     has_secure_password
@@ -9,9 +10,14 @@ class User < ApplicationRecord
     has_one_attached :image
 
     validates :name, presence: true, length: {maximum: 20}
+    validates :introduction, presence: true, length: {maximum: 100}, allow_blank: true
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :email, presence: true, length: {maximum: 255}, format: {with: VALID_EMAIL_REGEX}, uniqueness: true
-    validates :password, presence: true, length: { minimum: 6 }
+    validates :password, presence: true, length: { minimum: 6 }, allow_blank: true
+    validates :image, presence: true, allow_blank: true, content_type: { in: %w[image/jpeg image/gif image/png],
+                                                    message: "must be a valid image format" },
+                                                    size: { less_than: 5.megabytes,
+                                                    message: "should be less than 5MB" }
 
     # 渡された文字列のハッシュ値を返す
     def User.digest(string)
@@ -34,6 +40,10 @@ class User < ApplicationRecord
     def authenticated?(remember_token)
         return false if remember_digest.nil?
         BCrypt::Password.new(remember_digest).is_password?(remember_token)
+    end
+
+    def authen?
+        BCrypt::Password.new(password_digest).is_password?(self.current_password)
     end
 
     # ユーザーのログイン情報を破棄する

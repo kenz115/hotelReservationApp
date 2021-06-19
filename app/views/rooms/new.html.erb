@@ -7,31 +7,31 @@
             <p>ルーム情報登録</p>
             <%= render 'shared/error_messages', object: f.object %>
             <div class="update-content">
-                <div class="room-new-label">
+                <div class="label">
                     <%= f.label :name, "ルーム名" %><span>必須</span>
                 </div>
                 <%= f.text_field :name, placeholder: "ルーム名を入力" %><br>
             </div>
             <div class="update-content">
-                <div class="room-new-label">
+                <div class="label">
                     <%= f.label :introduction, "ルーム紹介" %><span>必須</span>
                 </div>
                 <%= f.text_area :introduction, placeholder: "ルーム説明を入力" %><br>
             </div>
             <div class="update-content">
-                <div class="room-new-label">
+                <div class="label">
                     <%= f.label :fee, "料金" %><span>必須</span>
                 </div>
                 <%= f.number_field :fee, placeholder: "１日あたりの料金を入力" %><br>
             </div>
             <div class="update-content">
-                <div class="room-new-label">
+                <div class="label">
                     <%= f.label :address, "住所" %><span>必須</span>
                 </div>
                 <%= f.text_field :address, placeholder: "住所を入力" %><br>
             </div>
             <div class="update-content">
-                <div class="room-new-label">
+                <div class="label">
                     <%= f.label :image, "ルーム画像" %><span>必須</span>
                 </div>
                 <%= f.file_field :image %><br>
