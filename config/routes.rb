@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :rooms do
     collection do
       get 'search'
+      get 'posts'
     end
   end
   get '/users/sign_up', to: 'users#new'

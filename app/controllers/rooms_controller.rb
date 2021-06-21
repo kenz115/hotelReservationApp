@@ -28,6 +28,10 @@ class RoomsController < ApplicationController
     @rooms = Room.where("address LIKE ?", "%#{params[:area]}%")
   end
 
+  def posts
+    @rooms = current_user.room
+  end
+
   private
 
     def room_params
