@@ -9,6 +9,8 @@ ja:
     email: メールアドレス
     password: パスワード
     password_confirmation: パスワード確認
+    introduction: 自己紹介
+    image: アイコン
    room:
     name: ルーム名
     address: 住所

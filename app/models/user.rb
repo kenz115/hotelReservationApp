@@ -10,11 +10,11 @@ class User < ApplicationRecord
     has_one_attached :image
 
     validates :name, presence: true, length: {maximum: 20}
-    validates :introduction, presence: true, length: {maximum: 100}, allow_blank: true
+    validates :introduction, presence: true, length: {maximum: 100}, on: :update
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :email, presence: true, length: {maximum: 255}, format: {with: VALID_EMAIL_REGEX}, uniqueness: true
     validates :password, presence: true, length: { minimum: 6 }, allow_blank: true
-    validates :image, presence: true, allow_blank: true, content_type: { in: %w[image/jpeg image/gif image/png],
+    validates :image, presence: true, on: :update, content_type: { in: %w[image/jpeg image/gif image/png],
                                                     message: "must be a valid image format" },
                                                     size: { less_than: 5.megabytes,
                                                     message: "should be less than 5MB" }

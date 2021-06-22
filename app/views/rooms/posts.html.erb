@@ -25,7 +25,7 @@
                     <%= room.fee %>
                 </td>
                 <td>
-                    <%= room.created_at %>
+                    <%= room.created_at.to_s(:datetime_jp) %>
                 </td>
             </tr>
         <% end %>
