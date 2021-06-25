@@ -68,3 +68,54 @@
         }
     }
 }
+
+/* index */
+
+#reserved-room-list {
+    padding: 30px 60px;
+    p {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    table {
+        border-collapse:collapse;
+        max-width: 100%;
+        min-width: 1000px;
+
+        tr:first-child {
+            border-top: 1px solid #eaedef;
+        }
+        tr {
+            border-bottom: 1px solid #eaedef;
+            th {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            td {
+                padding: 10px;
+                text-align: center;
+            }
+            th:first-child {
+                width: 25%;
+            }
+            a {
+                color: #4a90e2;
+                text-decoration: underline;
+            }
+            td:nth-child(2) {
+                font-size: 18px;
+                font-weight: bold;
+                width: 20%;
+            }
+            td:nth-child(3), td:nth-child(4), td:nth-child(5) {
+                font-size: 13px;
+            }
+            td:nth-child(3) {
+                width: 15%;
+            }
+            td:nth-child(6)::before {
+                content: '¥';
+            }
+        }
+    }
+}

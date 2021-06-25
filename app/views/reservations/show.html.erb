@@ -2,19 +2,19 @@
     <div id="reservation">
         <p>
             <span>予約した部屋</span>
-            <%= p "ルーム" %>
+            <%= @reservation.room.name %>
         </p>
         <p>
             <span>開始日</span>
-            <%= p "2021年06月22日" %>
+            <%= @reservation.start_date.to_s(:datetime_jp) %>
         </p>
         <p>
             <span>終了日</span>
-            <%= p "2021年06月22日" %>
+            <%= @reservation.end_date.to_s(:datetime_jp) %>
         </p>
         <p>
             <span>価格</span>
-            <%= p "10000円" %>
+            <%= @total_fee %>
         </p>
     </div>
 </div>

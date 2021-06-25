@@ -1,16 +1,20 @@
 <div id="new-reservation-wrap">
     <div id="new-reservation">
         <p id="confirm-reservation">予約内容確認</p>
-        <p id="fee-per-day">¥10 / 日</p>
         <%= form_with model: @reservation, local: true, multipart: true do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
+            <p id="fee-per-day">¥<%= @reservation.room.fee %> / 日</p>  
             <p><%= f.label :start_date, "開始日" %></p>
-            <p><%= f.text_field :start_date, id: "start_date", disabled: true %></p>
+            <p><%= f.text_field :start_date, id: "start_date", readonly: true %></p>
             <p><%= f.label :end_date, "終了日" %></p>
-            <p><%= f.text_field :end_date, id: "end_date", disabled: true %></p>
-            <p class="reservations-new-check-content">使用日数 : 1日</p>
-            <p class="reservations-new-check-content">人数 : 2人</p>
-            <p><%= f.label :number_of_peaple, "合計金額" %></p>
-            <p><%= f.text_field :number_of_peaple, disabled: true %></p>
+            <p><%= f.text_field :end_date, id: "end_date", readonly:true %></p>
+            <p class="reservations-new-check-content">使用日数 : <%= @days_of_use.to_s(:datetime_jp) %>日</p> 
+            <p class="reservations-new-check-content">人数 : <%= @reservation.number_of_peaple %>人</p>
+            <%= f.hidden_field :number_of_peaple, value: @reservation.number_of_peaple %>
+            <%= f.hidden_field :user_id, value: current_user.id %>
+            <%= f.hidden_field :room_id, value: @reservation.room.id %>
+            <p><%= f.label :total_fee, "合計金額" %></p>
+            <p><%= f.text_field :total_fee, disabled: true, value: @total_fee %></p>
             <p class="reservations-new-check-content">上記内容でよろしければ「予約を確定」を押してください</p>
             <p><%= f.submit "予約する" %></p>
             <%= link_to "ルーム詳細に戻る", :back %>
