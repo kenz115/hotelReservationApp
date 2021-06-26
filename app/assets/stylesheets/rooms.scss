@@ -56,6 +56,12 @@
 #show {
     padding: 30px 150px;
 }
+#show-room-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 #room-detail {
     width: 66%;
     padding: 0 15px;
@@ -184,3 +190,78 @@
     }
 }
 
+/* new */
+#new-room {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 959px) {
+    .search {
+        padding: 30px 40px;
+    }
+    #show {
+        padding: 30px 100px;
+    }
+	.searched-room-wrap {
+        width: 50%;
+    }
+    #show-room-wrap {
+        display: block;
+    }
+    #room-detail {
+        width: 100%;
+        .flex-left {
+            img {
+                width:60px;
+                height:60px;
+            }
+        }
+    }
+    #reservation-form {
+        width: 100%;
+    }
+    #new-room {
+        display: block;
+        form {
+            margin-top: 0;
+        }
+        .form {
+            width: 100%;
+            .update-content {
+                display: block;
+                .label {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .search {
+        padding: 30px 20px;
+    }
+    #show {
+        padding: 30px 50px;
+    }
+	.searched-room-wrap {
+        width: 90%;
+    }
+    #room-detail {
+        .flex-left {
+            img {
+                width:40px;
+                height:40px;
+            }
+        }
+    }
+    .searched-room-wrap {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-bottom: 10px;
+    }
+}

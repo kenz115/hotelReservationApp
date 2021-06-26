@@ -12,6 +12,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .flex-align-start {
     width: 100%;
@@ -155,5 +156,28 @@ ul {
     width: 100%;
     input, textarea {
         background-color: #FFABCE;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .side-menu {
+        width: 300px;
+        margin: 0;
+        padding: 30px 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .active {
+            font-size: 18px;
+            padding: 0;
+            border-right: none;
+            border-bottom: 3px solid #4a90e2;
+            margin: 0 15px;
+        }
+        .non-active {
+            font-size: 18px;
+            padding: 0;
+            cursor: pointer;
+        }
     }
 }

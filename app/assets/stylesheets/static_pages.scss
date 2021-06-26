@@ -29,6 +29,7 @@ header {
         }
         #current-user-image {
             width:55px;
+            min-width: 55px;
             height:55px;
             object-fit:cover;
             border-radius:50%;
@@ -113,6 +114,7 @@ footer {
     background-image: url(img_cover_top);
     background-size: cover;
     width: 100%;
+    min-width: 700px;
     height: 650px;
     padding-left: 200px;
     margin-bottom: 64px;
@@ -149,7 +151,7 @@ footer {
 }
 
 #recommended-area {
-    max-width: 960px;
+    width: 70%;
     margin: 0 auto;
     margin-bottom: 64px;
     h3 {
@@ -159,8 +161,9 @@ footer {
 }
 .areas {
     position: relative;
-    width: 25%;
+    width: 23%;
     height: 360px;
+    margin-bottom: 15px;
     img {
         width: 100%;
         height: 100%;
@@ -180,7 +183,7 @@ footer {
     }
 }
 .areas:not(.areas:last-child) {
-    margin-right: 30px;
+    margin-right: 1%;
 }
 
 /* flash */
@@ -198,4 +201,27 @@ footer {
 }
 .alert-notice {
     background-color: lightblue;
+}
+
+@media screen and (max-width: 959px) {
+	.header-search-field {
+        display: none;
+    }
+    #fv {
+        padding-left: 30px;
+    }
+    .areas {
+        width: 45%;
+    }
+}
+@media screen and (max-width: 600px) {
+	#current-user-name {
+        display: none;
+    }
+    .areas {
+        width: 90%;
+    }
+    #area-search-field {
+        width: 320px;
+    }
 }

@@ -68,7 +68,12 @@
 }
 
 /* account, profile */
-
+.account-profile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 .edit-user-wrap {
     width: 83%;
     border-left: 2px solid #e2e2e2;
@@ -140,5 +145,41 @@
     }
     a:hover {
         background-color: #999;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .account-profile {
+        display: block;
+    }
+    .edit-user-wrap {
+        width: 100%;
+        padding: 30px 0;
+        height: auto;
+    }
+    #plofile-form {
+        width: 100%;
+        .update-content {
+            display: block;
+            .label {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .sign {
+        .sign-wrap {
+            width: 65%;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    #edit-account {
+        width: 80%;
+    }
+    .sign {
+        .sign-wrap {
+            width: 85%;
+        }
     }
 }

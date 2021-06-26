@@ -1,4 +1,4 @@
-<div class="flex-align-start">
+<div class="account-profile">
     <div class="side-menu">
         <p class="non-active">
             <%= link_to "アカウント", '/users/account' %>
@@ -7,7 +7,7 @@
             <%= link_to "プロフィール", '/users/profile' %>
         </p>
     </div>
-    <div class="form">
+    <div id="plofile-form" class="form">
         <%= form_with model: @user, url: '/users/profile', method: :patch, local: true, multipart: true do |f| %>
             <p>プロフィール</p>
             <%= render 'shared/error_messages', object: f.object %>
