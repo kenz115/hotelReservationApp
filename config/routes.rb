@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
   root 'static_pages#home'
+
+  get 'sessions/new'
+  
   resources :rooms do
     collection do
       get 'search'
       get 'posts'
     end
   end
+
   get '/users/sign_up', to: 'users#new'
   post '/users', to: 'users#create'
   get '/users/account', to: 'users#account'
