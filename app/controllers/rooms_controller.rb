@@ -21,9 +21,6 @@ class RoomsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
   def search
     @rooms = Room.where("address LIKE ?", "%#{params[:area]}%")
   end

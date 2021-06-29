@@ -103,4 +103,15 @@ RSpec.describe "Users", type: :request do
       expect(response).to have_http_status(:success)
     end
   end
+
+  describe "GET /sign_out" do
+    before do
+      @user = FactoryBot.create(:user)
+    end
+
+    it "ホーム覧画面に遷移すること" do
+      delete "/sign_out"
+      expect(response).to redirect_to "/"
+    end
+  end
 end
