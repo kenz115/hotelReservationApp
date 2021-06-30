@@ -5,5 +5,10 @@ FactoryBot.define do
     number_of_peaple { 1 }
     room_id { 1 }
     user_id { 1 }
+
+    trait :error_date do
+      start_date { "2021-5-21" }
+      end_date { "2021-5-20" }
+    end
   end
 end

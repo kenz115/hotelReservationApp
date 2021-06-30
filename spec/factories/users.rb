@@ -17,5 +17,9 @@ FactoryBot.define do
       name { "編集後テストユーザー" }
       introduction { "自己紹介テスト" }
     end
+
+    trait :over_characters do
+      name { "testtesttesttesttestt" }
+    end
   end
 end
