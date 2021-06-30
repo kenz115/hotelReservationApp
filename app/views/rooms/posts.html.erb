@@ -1,0 +1,34 @@
+<div id="registered-room-list">
+    <p>登録済みルーム一覧</p>
+    <table>
+        <tr class="table-header">
+            <th>ルーム画像</th>
+            <th>ルーム名</th>
+            <th>ルーム紹介</th>
+            <th>料金</th>
+            <th>作成日</th>
+        </tr>
+        <% @rooms.each do |room| %>
+            <tr>
+                <td>
+                    <%= link_to room , method: :get,locale: true do %>
+                        <%= image_tag room.image %>
+                    <% end %>
+                </td>
+                <td>
+                    <%= link_to room.name, room %>
+                </td>
+                <td>
+                    <%= room.introduction %>
+                </td>
+                <td>
+                    <%= room.fee %>
+                </td>
+                <td>
+                    <%= room.created_at.to_s(:datetime_jp) %>
+                </td>
+            </tr>
+        <% end %>
+    </table>
+</div>
+

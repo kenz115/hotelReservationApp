@@ -1,0 +1,45 @@
+<div id="reserved-room-list">
+    <p>予約済みルーム一覧</p>
+    <table>
+        <tr class="table-header">
+            <th>ルーム画像</th>
+            <th>ルーム名</th>
+            <th>ルーム紹介</th>
+            <th>合計料金</th>
+            <th>開始日</th>
+            <th>終了日</th>
+            <th>予約確定日</th>
+        </tr>
+        <% @reservations.each do |reservation| %>
+        <%
+           days_of_use = (reservation.end_date.to_date - reservation.start_date.to_date).to_i
+           total_fee = reservation.room.fee * reservation.number_of_peaple * days_of_use
+        %>
+            <tr>
+                <td>
+                    <%= link_to "/rooms/#{reservation.room_id}" , method: :get,locale: true do %>
+                        <%= image_tag reservation.room.image %>
+                    <% end %>
+                </td>
+                <td>
+                    <%= link_to reservation.room.name, "/rooms/#{reservation.room_id}" %>
+                </td>
+                <td>
+                    <%= reservation.room.introduction %>
+                </td>
+                <td>
+                    <%= reservation.start_date.to_s(:datetime_jp) %>
+                </td>
+                <td>
+                    <%= reservation.end_date.to_s(:datetime_jp) %>
+                </td>
+                <td>
+                    <%= total_fee %>
+                </td>
+                <td>
+                    <%= reservation.created_at.to_s(:datetime_jp) %>
+                </td>
+            </tr>
+        <% end %>
+    </table>
+</div>

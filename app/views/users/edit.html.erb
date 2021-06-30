@@ -1,0 +1,16 @@
+<div id="edit-account">
+    <%= form_with model: @user, url: '/users/update', method: :patch, local: true do |f| %>
+        <p>アカウント編集</p>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.label :email, "メールアドレス" %><br>
+        <%= f.email_field :email, value: @user.email %><br>
+        <%= f.label :password, "変更後パスワード（変更する場合のみ入力）" %><br>
+        <%= f.password_field :password %><br>
+        <%= f.label :password_confirmation, "パスワード確認用（変更する場合のみ入力）" %><br>
+        <%= f.password_field :password_confirmation %><br>
+        <%= f.label :current_password, "現在のパスワード" %><br>
+        <%= f.password_field :current_password %><br>
+        <%= f.submit "更新" %><br>
+        <%= link_to "戻る", '/users/account' %>
+    <% end %>
+</div>

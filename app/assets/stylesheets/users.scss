@@ -1,0 +1,185 @@
+/* sign */
+
+.sign {
+    padding-top: 30px;
+    .sign-wrap {
+        width: 45%;
+        margin: 0 auto;
+        box-shadow: #ced4da 0px 1px 3px 0px;
+        padding: 24px;
+        text-align: center;
+        form {
+            width: 100%;
+            margin: 0 auto;
+            label {
+                color: #fff;
+                background-color: #ff0000a8;
+                font-size: 12px;
+                border-radius: 5px;
+                padding: 4px;
+                margin: 0 5px;
+            }
+            input[type="text"], input[type="email"], input[type="password"] {
+                width: 50%;
+                margin-bottom: 20px;
+                height: 38px;
+                padding: 5px 10px;
+                border: 1px solid #ced4da;
+            }
+            input[type="submit"] {
+                width: 60%;
+                margin-bottom: 20px;
+                height: 38px;
+                border-radius: 4px;
+            }
+        }
+        p {
+            font-size: 16px;
+            margin: 25px 0;
+        }
+        .sign-link {
+            color: #007bff;
+        }
+    }
+}
+
+/* error */
+
+#error_explanation {
+    width: 80%;
+    margin: 0 auto;
+    ul {
+        border: 3px solid #f00;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.danger {
+    background-color: #f00;
+    color: #fff;
+}
+
+.field_with_errors {
+    display: inline;
+    input {
+        background-color: #FFABCE;
+    }
+}
+
+/* account, profile */
+.account-profile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.edit-user-wrap {
+    width: 83%;
+    border-left: 2px solid #e2e2e2;
+    background-color: #F6F8F9;
+    height: 600px;
+    .edit-user {
+        background-color: #fff;
+        max-width: 880px;
+        margin: 30px auto;
+        border: 1px solid #eaedef;
+        p {
+            font-size: 20px;
+            padding: 20px;
+        }
+        p, .account-content {
+            border-bottom: 1px solid #eaedef;
+        }
+        .account-content {
+            padding: 30px;
+            width: 100%;
+            a {
+                color: #fff;
+                background-color: #4a90e2;
+                border: none;
+                padding: 10px 45px;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+        }
+        label {
+            display: inline-block;
+            font-weight: bold;
+            width: 25%;
+        }
+        #email, #password {
+            display: inline-block;
+        }
+    }
+}
+
+/* edit */
+
+#edit-account {
+    width: 600px;
+    margin: 30px auto 0 auto;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: #bbb 0px 1px 3px 0px;
+    p {
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+    input, a {
+        width: 65%;
+        height: 38px;
+        border: 1px solid #ced4da;
+        border-radius: 3px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    input[type="email"], input[type="password"] {
+        padding-left: 10px;
+    }
+    a {
+        display: inline-block;
+        line-height: 38px;
+        color: #4a90e2;
+        transition: .5s;
+    }
+    a:hover {
+        background-color: #999;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .account-profile {
+        display: block;
+    }
+    .edit-user-wrap {
+        width: 100%;
+        padding: 30px 0;
+        height: auto;
+    }
+    #plofile-form {
+        width: 100%;
+        .update-content {
+            display: block;
+            .label {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .sign {
+        .sign-wrap {
+            width: 65%;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    #edit-account {
+        width: 80%;
+    }
+    .sign {
+        .sign-wrap {
+            width: 85%;
+        }
+    }
+}

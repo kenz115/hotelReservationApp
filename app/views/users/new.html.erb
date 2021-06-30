@@ -1,0 +1,18 @@
+<div class="sign">
+    <div class="sign-wrap">
+        <p>新しいアカウントを作成</p>
+        <%= form_with model: @user, local: true do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
+            <%= f.label :name, "必須" %>
+            <%= f.text_field :name, placeholder: "ユーザー名" %><br>
+            <%= f.label :email, "必須" %>
+            <%= f.email_field :email, placeholder: "メールアドレス" %><br>
+            <%= f.label :password, "必須" %>
+            <%= f.password_field :password, placeholder: "パスワード" %><br>
+            <%= f.label :password_confirmation, "必須" %>
+            <%= f.password_field :password_confirmation, placeholder: "パスワード確認" %><br>
+            <%= f.submit "新しいアカウントを作成" %>
+        <% end %>
+        <%= link_to "すでにアカウントをお持ちの方はログイン", '/users/sign_in', class: "sign-link" %>
+    </div>
+</div>
